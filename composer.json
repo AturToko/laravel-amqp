@@ -1,0 +1,36 @@
+{
+    "name": "idham101/laravel-amqp",
+    "description": "aturtoko/amqp wrapper for Laravel-ish frameworks",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.2|^8.0",
+        "idham101/amqp": ">=1.0.0",
+        "illuminate/support": "^5.8|^6.0|^7.0|^8.0|^9.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0|^9.0",
+        "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AturToko\\Laravel\\Amqp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AturToko\\Laravel\\Amqp\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AturToko\\Laravel\\Amqp\\Providers\\AmqpServiceProvider"
+            ],
+            "aliases": {
+                "Amqp": "AturToko\\Laravel\\Amqp\\Facades\\Amqp"
+            }
+        }
+    }
+}
